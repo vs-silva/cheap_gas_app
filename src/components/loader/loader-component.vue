@@ -21,8 +21,8 @@
 <script setup lang="ts">
 
 import {ref} from "vue";
-import {EventTypeConstants} from "@/eventbus/event-type.constants";
-import Eventbus from "@/eventbus";
+import {EventTypeConstants} from "../../eventbus/event-type.constants";
+import Eventbus from "../../eventbus";
 
 const loading = ref(false);
 

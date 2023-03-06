@@ -1,10 +1,10 @@
 import {ref} from "vue";
-import type {GasStationDTO} from "@/integration/gas-station/business/dtos/gas-station.dto";
-import GasStation from "@/integration/gas-station";
-import type {GasStationOptionalRequestDTO} from "@/integration/gas-station/business/dtos/gas-station-optional-request.dto";
-import {FuelTypeConstants} from "@/integration/gas-station/business/constants/fuel-type.constants";
-import {SortTypeConstants} from "@/integration/gas-station/business/constants/sort-type.constants";
-import {GasStationBrandConstants} from "@/integration/gas-station/business/constants/gas-station-brand.constants";
+import type {GasStationDTO} from "../../integration/gas-station/business/dtos/gas-station.dto";
+import GasStation from "../../integration/gas-station";
+import type {GasStationOptionalRequestDTO} from "../../integration/gas-station/business/dtos/gas-station-optional-request.dto";
+import {FuelTypeConstants} from "../../integration/gas-station/business/constants/fuel-type.constants";
+import {SortTypeConstants} from "../../integration/gas-station/business/constants/sort-type.constants";
+import {GasStationBrandConstants} from "../../integration/gas-station/business/constants/gas-station-brand.constants";
 
 export function GasStationStore () {
 
@@ -38,6 +38,7 @@ export function GasStationStore () {
         const result = await GasStation.getAllStations(reqPayload);
         gasStations.value = result;
         filteredGasStations.value = result;
+        // @ts-ignore
         gasStationBrands.value = [...new Set(result.map(station => (station.brand)))];
     }
 

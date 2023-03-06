@@ -1,11 +1,11 @@
 import type {
     RequestMapperInterface
-} from "@/integration/gas-station/business/mappers/request-mapper/request-mapper.interface";
-import type {GasStationRequestDTO} from "@/integration/gas-station/business/dtos/gas-station-request.dto";
+} from "./request-mapper.interface";
+import type {GasStationRequestDTO} from "../../dtos/gas-station-request.dto";
 import type {
     GasStationOptionalRequestDTO
-} from "@/integration/gas-station/business/dtos/gas-station-optional-request.dto";
-import {ApiTypeKeyConstants} from "@/integration/gas-station/business/constants/api-type-key.constants";
+} from "../../dtos/gas-station-optional-request.dto";
+import {ApiTypeKeyConstants} from "../../constants/api-type-key.constants";
 
 async function mapToRequestDTO(optionalRequestDTO: GasStationOptionalRequestDTO): Promise<GasStationRequestDTO> {
 

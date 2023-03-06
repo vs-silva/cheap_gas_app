@@ -7,7 +7,7 @@
 
     <div class="m-auto">
       <select id="gasStationSortSelect" v-model="selectedSortType" @change="updateSelectedFuelType" class="text-center sort-types-select">
-        <option v-for="(sortType) in sortTypes" :key="sortType" class="sort-types-select-option">
+        <option v-for="(sortType) in sortTypes" :key="`${sortType}`" class="sort-types-select-option">
           {{sortType}}
         </option>
       </select>
@@ -18,9 +18,9 @@
 
 <script setup lang="ts">
 import {ref} from "vue";
-import Eventbus from "@/eventbus";
-import {EventTypeConstants} from "@/eventbus/event-type.constants";
-import type {GasStationOptionalRequestDTO} from "@/integration/gas-station/business/dtos/gas-station-optional-request.dto";
+import Eventbus from "../../eventbus";
+import {EventTypeConstants} from "../../eventbus/event-type.constants";
+import type {GasStationOptionalRequestDTO} from "../../integration/gas-station/business/dtos/gas-station-optional-request.dto";
 
 const props = defineProps({
   sortTypes: {

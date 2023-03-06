@@ -1,7 +1,7 @@
-import type {GasStationServiceDrivenPort} from "@/integration/gas-station/ports/gas-station-service-driven.port";
-import type {GasStationRequestDTO} from "@/integration/gas-station/business/dtos/gas-station-request.dto";
-import ApiEngine from "@/apiengine";
-import settings from "@/settings";
+import type {GasStationServiceDrivenPort} from "../ports/gas-station-service-driven.port";
+import type {GasStationRequestDTO} from "../business/dtos/gas-station-request.dto";
+import ApiEngine from "../../../apiengine";
+import settings from "../../../settings";
 
 
 export function GasStationApiClientAdapter(): GasStationServiceDrivenPort {

@@ -38,12 +38,14 @@
 
 <script setup lang="ts">
 import {shareGasStation} from "./utils/gas-stations-list-component.utils";
+import type {GasStationDTO} from "../../integration/gas-station/business/dtos/gas-station.dto";
+import {PropType} from "vue";
 
 defineProps({
   gasStations: {
-    type: Array,
+    type: [] as PropType<GasStationDTO[]>,
     required: false,
-    default: () => []
+    default: () => <GasStationDTO[]>[]
   }
 });
 

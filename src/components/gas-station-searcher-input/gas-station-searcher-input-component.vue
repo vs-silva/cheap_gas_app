@@ -19,9 +19,9 @@
 
 <script setup lang="ts">
 import {ref} from "vue";
-import Eventbus from "@/eventbus";
-import {EventTypeConstants} from "@/eventbus/event-type.constants";
-import type {GasStationOptionalRequestDTO} from "@/integration/gas-station/business/dtos/gas-station-optional-request.dto";
+import Eventbus from "../../eventbus";
+import {EventTypeConstants} from "../../eventbus/event-type.constants";
+import type {GasStationOptionalRequestDTO} from "../../integration/gas-station/business/dtos/gas-station-optional-request.dto";
 
 const selectedRadius = ref(0);
 

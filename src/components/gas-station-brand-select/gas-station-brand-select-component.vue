@@ -8,7 +8,7 @@
       <select id="gasStationBrandSelect" v-model="selectedBrand" @change="updateSelectedBrand" class="text-center brand-select">
         <option value="" disabled selected class="brand-select-default-option">Select desired brand</option>
         <option :value="GasStationBrandConstants.ALL" class="brand-select-option">{{GasStationBrandConstants.ALL.toUpperCase()}}</option>
-        <option v-for="(brand) in brands" :key="brand" :selected="selectedBrand" class="brand-select-option">
+        <option v-for="(brand) in brands" :key="brand" class="brand-select-option">
           {{brand}}
         </option>
       </select>
@@ -20,14 +20,14 @@
 
 <script setup lang="ts">
 
-import {ref} from "vue";
-import Eventbus from "@/eventbus";
-import {EventTypeConstants} from "@/eventbus/event-type.constants";
-import {GasStationBrandConstants} from "@/integration/gas-station/business/constants/gas-station-brand.constants";
+import {PropType, ref} from "vue";
+import Eventbus from "../../eventbus";
+import {EventTypeConstants} from "../../eventbus/event-type.constants";
+import {GasStationBrandConstants} from "../../integration/gas-station/business/constants/gas-station-brand.constants";
 
 defineProps({
   brands: {
-    type: Array,
+    type: [] as PropType<string[]>,
     required: false,
     default: () => []
   }

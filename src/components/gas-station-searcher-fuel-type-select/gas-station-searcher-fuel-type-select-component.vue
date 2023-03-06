@@ -7,7 +7,7 @@
 
     <div class="m-auto fuel-types-select-container">
       <select id="gasStationFuelSelect" v-model="selectedFuelType" @change="updateSelectedFuelType" class="text-center fuel-types-select">
-        <option v-for="(fuelType) in fuelTypes" :key="fuelType" class="fuel-types-select-option">
+        <option v-for="(fuelType) in fuelTypes" :key="`${fuelType}`" class="fuel-types-select-option">
           {{fuelType}}
         </option>
       </select>
@@ -18,9 +18,9 @@
 
 <script setup lang="ts">
 import {ref} from "vue";
-import Eventbus from "@/eventbus";
-import {EventTypeConstants} from "@/eventbus/event-type.constants";
-import type {GasStationOptionalRequestDTO} from "@/integration/gas-station/business/dtos/gas-station-optional-request.dto";
+import Eventbus from "../../eventbus";
+import {EventTypeConstants} from "../../eventbus/event-type.constants";
+import type {GasStationOptionalRequestDTO} from "../../integration/gas-station/business/dtos/gas-station-optional-request.dto";
 
 const props = defineProps({
   fuelTypes: {

@@ -1,14 +1,14 @@
-import type {GasStationServiceDriverPort} from "@/integration/gas-station/ports/gas-station-service-driver.port";
-import type {GasStationServiceDrivenPort} from "@/integration/gas-station/ports/gas-station-service-driven.port";
-import type {GasStationRequestDTO} from "@/integration/gas-station/business/dtos/gas-station-request.dto";
-import type {GasStationDTO} from "@/integration/gas-station/business/dtos/gas-station.dto";
+import type {GasStationServiceDriverPort} from "./ports/gas-station-service-driver.port";
+import type {GasStationServiceDrivenPort} from "./ports/gas-station-service-driven.port";
+import type {GasStationRequestDTO} from "./business/dtos/gas-station-request.dto";
+import type {GasStationDTO} from "./business/dtos/gas-station.dto";
 import type {
     GasStationOptionalRequestDTO
-} from "@/integration/gas-station/business/dtos/gas-station-optional-request.dto";
-import {RequestMapperService} from "@/integration/gas-station/business/mappers/request-mapper/request-mapper.service";
+} from "./business/dtos/gas-station-optional-request.dto";
+import {RequestMapperService} from "./business/mappers/request-mapper/request-mapper.service";
 import {
     GasStationMapperService
-} from "@/integration/gas-station/business/mappers/gas-station-mapper/gas-station-mapper.service";
+} from "./business/mappers/gas-station-mapper/gas-station-mapper.service";
 
 export function GasStationService(reader: GasStationServiceDrivenPort): GasStationServiceDriverPort {
 

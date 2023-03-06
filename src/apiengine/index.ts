@@ -1,7 +1,7 @@
 import axios from "axios";
 import type {InternalAxiosRequestConfig, AxiosResponse} from "axios";
 import Eventbus from '../eventbus';
-import {EventTypeConstants} from "@/eventbus/event-type.constants";
+import {EventTypeConstants} from "../eventbus/event-type.constants";
 
 const ApiEngine = axios.create({
     timeout: ( 60 * 1000 ),

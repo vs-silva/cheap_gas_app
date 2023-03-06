@@ -1,10 +1,10 @@
 import type {
     GasStationMapperInterface
-} from "@/integration/gas-station/business/mappers/gas-station-mapper/gas-station-mapper.interface";
-import type {GasStationDTO} from "@/integration/gas-station/business/dtos/gas-station.dto";
+} from "./gas-station-mapper.interface";
+import type {GasStationDTO} from "../../../business/dtos/gas-station.dto";
 import {
     GasStationRequestedFieldsConstants
-} from "@/integration/gas-station/business/constants/gas-station-requested-fields.constants";
+} from "../../../business/constants/gas-station-requested-fields.constants";
 
 async function mapToGasStationDTOCollection(data: object[]): Promise<GasStationDTO[]> {
 

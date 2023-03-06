@@ -1,4 +1,4 @@
-import type {GasStationDTO} from "@/integration/gas-station/business/dtos/gas-station.dto";
+import type {GasStationDTO} from "../../../integration/gas-station/business/dtos/gas-station.dto";
 
 export async function shareGasStation(gasStation: GasStationDTO):Promise<void> {
 
